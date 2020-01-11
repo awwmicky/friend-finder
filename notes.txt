@@ -1,0 +1,9 @@
+< Friend Finder - Notes >
+
+= OTHER =
+- create modal
+- create second survey pg
+
+= BONUS =
+- match to 5 people (range)
+- use cvs to export user data
