@@ -73,26 +73,3 @@ viewAllFriends = () => {
 viewAllFriends();
 /*  */
 });
-
-/* 
-- Q can you beat the joker?
-    - using fists 1---5
-    - using kicks 1---5
-    - using headbutts 1---5
-^ range
-- 10 < x
-    - robin
-- 10 > x
-    - batman
-
-= Option 1 =
-^ survey
-- [5,5,3] = 13
-- [1,1,2] = 4
-
-= Option 2 =
-- [5,5,3]
-- [1,1,2]
-- [4,4,1] (subtotal)
-- 9 (total)
-*/
