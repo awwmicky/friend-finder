@@ -13,13 +13,13 @@ router.post('/friends', (req, res) => {
     // console.log(req.body);
     let user = req.body;
 
-    user.score.forEach( (num, idx) => {
+    user.score.forEach( (num , idx) => {
         user.score[idx] = Number(num);
     });
-    console.log(user);
+    console.log('Server Data:' , user);
 
     let bestMatch = 0;
-    let minimumDiff = 50;
+    let minimumDiff = 25;
 
     for (let i = 0; i < friendsData.length; i++) {
         let totalDiff = 0;
@@ -31,14 +31,25 @@ router.post('/friends', (req, res) => {
             totalDiff += difference;
         }
 
+        
         if (totalDiff < minimumDiff) {
             bestMatch = i;
             minimumDiff = totalDiff;
+
+            console.log(
+                'Total:' , totalDiff , '\n',
+                'Match:' , friendsData[bestMatch]
+            );            
         }
     }
 
+    console.log(
+        'Min Diff:' , minimumDiff , '\n',
+        'Match:' , friendsData[bestMatch]
+    );
+
     friendsData.push(user);
-    res.send(friendsData[bestMatch]);
+    res.send( friendsData[bestMatch] );
 });
 
 /*  */

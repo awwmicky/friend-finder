@@ -1,9 +1,13 @@
 $(() => {
+/*  */
+
 const $surveyPgBtn = $('.survey-pg-btn');
 $surveyPgBtn.on('click', _ => {
-    window.location = './survey';
+    window.location = '/survey';
 });
+
 /*  */
+
 const $surveyFrom = $('.survey-from');
 const $nameInput = $('.name-input');
 const $radioAllBtns = $('input[type=radio]');
@@ -35,7 +39,7 @@ $surveyFrom.on('submit', e => {
 
     $.ajax({
         type: 'POST',
-        url: '../api/friends',
+        url: '/api/friends',
         data: newUser
     })
     .then( res => {
@@ -43,7 +47,7 @@ $surveyFrom.on('submit', e => {
         $answerMatchResults.empty();
         $answerMatchResults.append(
             `<br>
-            <div id="content">
+            <div class="finder-results">
                 <h1>MATCH</h1>
                 <h3>${newUser.name}</h3>
                 <p>=== is closes to ===</p>
@@ -61,7 +65,7 @@ $surveyFrom.on('submit', e => {
 viewAllFriends = () => {
     $.ajax({
         type: 'GET',
-        url: '../api/friends'
+        url: '/api/friends'
     })
     .then( res => {
         console.log(res);

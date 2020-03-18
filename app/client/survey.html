@@ -12,16 +12,19 @@
 </head>
 
 <body>
-<div>
+<div class="survey-info">
     <h1>SURVEY</h1>
-    <blockquote>Which TA can you work with?</blockquote>
-    <blockquote>(least) 1 ————— 5 (greatest)</blockquote>
+    <blockquote>
+        TA — Student 
+    </blockquote>
 </div>
+
 <main>
     <form class="survey-from">
     <fieldset>
-        <legend>Rank your Might</legend>
-        <div>
+        <legend>Rank 1 — 5</legend>
+        
+        <div .group>
             <label for="name">NAME: </label>
             <input 
                 type="text" 
@@ -29,10 +32,14 @@
                 class="name-input" 
                 placeholder="enter name" 
                 autocomplete="off"
+                autofocus
+                required
             />
         </div>
+
         <div>
-            <p>1.) can programmers make anagrams?</p>
+            <p>1.) do you know about cecada?</p>
+            
             <label for="q-1">
                 1: <input type="radio" name="q-1" value="1">
             </label>
@@ -49,8 +56,10 @@
                 5: <input type="radio" name="q-1" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>2.) how many fingers do you have?</p>
+            <p>2.) do you have bitcoin?</p>
+            
             <label for="q-2">
                 1: <input type="radio" name="q-2" value="1">
             </label>
@@ -67,8 +76,10 @@
                 5: <input type="radio" name="q-2" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>3.) how many hours do you stare at a screen?</p>
+            <p>3.) how focus can you be in a day?</p>
+            
             <label for="q-3">
                 1: <input type="radio" name="q-3" value="1">
             </label>
@@ -85,8 +96,10 @@
                 5: <input type="radio" name="q-3" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>4.) how many questions do you ask in class?</p>
+            <p>4.) is your mind the universe?</p>
+            
             <label for="q-4">
                 1: <input type="radio" name="q-4" value="1">
             </label>
@@ -103,8 +116,10 @@
                 5: <input type="radio" name="q-4" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>5.) Is this a good question to ask?</p>
+            <p>5.) are you a s-tier coder?</p>
+            
             <label for="q-5">
                 1: <input type="radio" name="q-5" value="1">
             </label>
@@ -121,8 +136,10 @@
                 5: <input type="radio" name="q-5" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>6.) would you like to build a human?</p>
+            <p>6.) would you like to sleep early?</p>
+            
             <label for="q-6">
                 1: <input type="radio" name="q-6" value="1">
             </label>
@@ -139,8 +156,10 @@
                 5: <input type="radio" name="q-6" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>7.) have you seen the muffin-man?</p>
+            <p>7.) how sweet is the muffin-man?</p>
+            
             <label for="q-7">
                 1: <input type="radio" name="q-7" value="1">
             </label>
@@ -157,8 +176,10 @@
                 5: <input type="radio" name="q-7" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>8.) how many places have you travelled?</p>
+            <p>8.) do you like travelling</p>
+            
             <label for="q-8">
                 1: <input type="radio" name="q-8" value="1">
             </label>
@@ -175,8 +196,10 @@
                 5: <input type="radio" name="q-8" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>9.) do you zone in & out of class?</p>
+            <p>9.) how many hours do you stare at a screen?</p>
+            
             <label for="q-9">
                 1: <input type="radio" name="q-9" value="1">
             </label>
@@ -193,8 +216,10 @@
                 5: <input type="radio" name="q-9" value="5">
             </label>
         </div>
+        <br>
         <div>
-            <p>10.) are we dont yet?</p>
+            <p>10.) is this the last question?</p>
+            
             <label for="q-10">
                 1: <input type="radio" name="q-10" value="1">
             </label>
@@ -212,7 +237,7 @@
             </label>
         </div>
         <br>
-        <input type="submit" name="submit" class="submit-btn" value="SUBMIT">
+        <input type="submit" name="submit" class="submit-btn btn" value="SUBMIT">
 </fieldset>
     </form>
 </main>
