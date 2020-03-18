@@ -3,28 +3,24 @@ const app = express();
 
 
 
-app.use(
-    express.urlencoded({
-        extended: true
-    })
-);
 app.use(express.json());
+app.use(express.urlencoded({extended : true }));
 app.use(express.static('./app/client/'));
 
 
 
 const apiRoutes = require('./app/routes/apiRoutes.js');
-app.use('/api', apiRoutes);
-
 const clientRoutes = require('./app/routes/clientRoutes.js');
+
+app.use('/api', apiRoutes);
 app.use('/', clientRoutes);
 
 
 
-const PORT = process.event.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(
         `Test Server -`,
-        ` http://localhost:${PORT}`
+        `http://localhost:${PORT}`
     );
 });
