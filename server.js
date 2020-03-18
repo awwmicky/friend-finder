@@ -21,7 +21,10 @@ app.use('/', clientRoutes);
 
 
 
-const PORT = 3000;
+const PORT = process.event.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Test Server - http://localhost:${PORT}`);
+    console.log(
+        `Test Server -`,
+        ` http://localhost:${PORT}`
+    );
 });
